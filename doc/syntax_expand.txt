@@ -1,0 +1,40 @@
+*syntax_expand.txt*
+
+===============================================================================
+Introduction                           *syntax_expand* *syntax_expand-introduction*
+
+These functions can be used in conjunction with the conceal feature to obtain
+shorthand forms for languages. It allows you to expand a single key to another
+string (that you may well conceal back to the original character) as long as
+you're not in a string or comment.
+
+For example, you may expand "@" to "this" in JavaScript and conceal "this" back
+to "@". So you see and type "@" but Vim actually deals with the full syntax
+underneath.
+
+===============================================================================
+Functions                                 *syntax_expand* *syntax_expand-functions*
+
+syntax_expand#expand({string}, {string})                  *syntax_expand#expand()*
+    Attempts to swap the first string for the second one. If we are currently
+    in a comment or string syntax item it will return the first string, if
+    we're in any other syntax block it will return the second. So swapping "@"
+    for "this" will only succeed if you're outside of a string or comment.
+
+syntax_expand#expand_head({string}, {string})        *syntax_expand#expand_head()*
+    Checks if the only characters before the cursor on the current line are
+    whitespace. If that's the case then it delegates to syntax_expand#expand.
+
+===============================================================================
+Author                                                     *syntax_expand-author*
+
+Oliver Caldwell <http://oli.me.uk/> / @OliverCaldwell
+
+===============================================================================
+Unlicence                                               *syntax_expand-unlicence*
+
+This is free and unencumbered software released into the public domain. For
+more information, please refer to <http://unlicense.org/> or the "README" of
+this project.
+
+vim:tw=78:ts=8:ft=help:norl:
