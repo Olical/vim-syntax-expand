@@ -37,6 +37,10 @@ let g:javascript_conceal_prototype = "#"
 
 So now when I type `@` it is actually expanded to `this` but I still see it as `@`. Cool, right? This will work for other languages too, you just need to set up your conceal rules (there's usually a plugin) and some expansion bindings.
 
+## Author
+
+[Oliver Caldwell][] / [@OliverCaldwell][]
+
 ## Unlicenced
 
 Find the full [unlicense][] in the `UNLICENSE` file, but here's a snippet.
@@ -50,3 +54,5 @@ Do what you want. Learn as much as you can. Unlicense more software.
 [unlicense]: http://unlicense.org/
 [vim-plug]: https://github.com/junegunn/vim-plug
 [vim-javascript]: https://github.com/pangloss/vim-javascript
+[Oliver Caldwell]: http://oli.me.uk/
+[@OliverCaldwell]: https://twitter.com/OliverCaldwell
