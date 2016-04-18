@@ -13,7 +13,7 @@ to "@". So you see and type "@" but Vim actually deals with the full syntax
 underneath.
 
 ===============================================================================
-Functions                                 *syntax_expand* *syntax_expand-functions*
+Functions                                                 *syntax_expand-functions*
 
 syntax_expand#expand({string}, {string})                  *syntax_expand#expand()*
     Attempts to swap the first string for the second one. If we are currently
