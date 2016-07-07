@@ -19,10 +19,10 @@ Plug 'Wolfy87/vim-syntax-expand'
 Here's my example configuration for JavaScript. The conceal functionality is provided by [vim-javascript][] (which is fantastic).
 
 ```vim
-" Map the conceal characters to their expanded forms.
-inoremap <silent> @ <C-r>=syntax_expand#expand("@", "this")<CR>
-inoremap <silent> # <C-r>=syntax_expand#expand("#", "prototype")<CR>
-inoremap <silent> < <C-r>=syntax_expand#expand_head("<", "return")<CR>
+" Map the conceal characters to their expanded forms (only for javascript files)
+autocmd FileType javascript inoremap <silent> <buffer> @ <C-r>=syntax_expand#expand("@", "this")<CR>
+autocmd FileType javascript inoremap <silent> <buffer> # <C-r>=syntax_expand#expand("#", ".prototype.")<CR>
+autocmd FileType javascript inoremap <silent> <buffer> < <C-r>=syntax_expand#expand_head("<", "return")<CR>
 
 " Keeps everything concealed at all times. Even when my cursor is on the word.
 set conceallevel=1
